@@ -1,0 +1,53 @@
+{
+  "info": {
+    "name": "Village Info API - Activities",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "POST - Buat kegiatan baru",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"category_id\": 2,\n  \"neighborhood_id\": 1,\n  \"title\": \"Kerja Bakti Perbaikan Jalan\",\n  \"description\": \"Menambal jalan berlubang\",\n  \"location\": \"Jl. Melati\",\n  \"activity_date\": \"2026-11-22\",\n  \"start_time\": \"07:00\",\n  \"end_time\": \"11:00\"\n}"
+        },
+        "url": { "raw": "http://localhost:3000/api/activities", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "activities"] }
+      }
+    },
+    {
+      "name": "GET - Semua kegiatan",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/api/activities", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "activities"] }
+      }
+    },
+    {
+      "name": "GET - Kegiatan berdasarkan ID",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/api/activities/1", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "activities", "1"] }
+      }
+    },
+    {
+      "name": "PUT - Update kegiatan",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"category_id\": 2,\n  \"neighborhood_id\": 1,\n  \"title\": \"Kerja Bakti Perbaikan Jalan (Update)\",\n  \"description\": \"Menambal jalan berlubang dan membersihkan selokan\",\n  \"location\": \"Jl. Melati\",\n  \"activity_date\": \"2026-11-23\",\n  \"start_time\": \"07:00\",\n  \"end_time\": \"12:00\",\n  \"status\": \"terjadwal\"\n}"
+        },
+        "url": { "raw": "http://localhost:3000/api/activities/1", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "activities", "1"] }
+      }
+    },
+    {
+      "name": "DELETE - Hapus kegiatan",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "http://localhost:3000/api/activities/1", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "activities", "1"] }
+      }
+    }
+  ]
+}

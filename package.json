@@ -1,0 +1,16 @@
+{
+  "name": "village-info-api",
+  "version": "1.0.0",
+  "description": "REST API Sistem Informasi Penjadwalan Kegiatan Desa (Siskamling & Gotong Royong)",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.12.0"
+  }
+}
